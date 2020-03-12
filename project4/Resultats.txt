@@ -1,0 +1,41 @@
+
+Option type = Call
+Maturity = March 10th, 2021
+Underlying price = 100
+Strike = 95
+Risk-free interest rate = 6.000000 %
+Dividend yield = 0.000000 %
+Volatility = 20.000000 %
+
+
+Pricing with oscillation
+500     12.7711
+501     12.7737
+502     12.7712
+503     12.7737
+504     12.7713
+505     12.7736
+506     12.7714
+507     12.7736
+508     12.7715
+509     12.7735
+510     12.7716
+511     12.7734
+
+Pricing without oscillation
+500     12.7722
+501     12.7722
+502     12.7722
+503     12.7722
+504     12.7722
+505     12.7722
+506     12.7722
+507     12.7722
+508     12.7722
+509     12.7722
+510     12.7722
+511     12.7722
+
+Sortie de C:\Users\MORO\Desktop\cpp\workd\example\Debug\Project1.exe (processus 5232) avec le code 0.
+Pour fermer automatiquement la console quand le débogage s'arrête, activez Outils->Options->Débogage->Fermer automatiquement la console à l'arrêt du débogage.
+Appuyez sur une touche pour fermer cette fenêtre.
