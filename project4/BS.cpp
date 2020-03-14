@@ -13,13 +13,22 @@ namespace {
 	QuantLib::NormalDistribution n;
 }
 
-BSprice BS(double S, double K, double T,double r, double sigma) {
+double BS(double S, double K, double T,double r, double sigma, bool CallOption, double dividend) {
 
 	double d1 = (1 / (sigma * sqrt(T))) * (log(S / K) + (r + sigma * sigma / 2) * T);
 	double d2 = d1 - sigma * sqrt(T);
 
-	BSprice val;
-	val.analyticPrice = N(d1) * S - N(d2) * K * exp(-r * T);
+	double analyticPrice;
+	 
+	if (CallOption) {
 
-	return val;
+	       analyticPrice = N(d1) *	 S * exp(-dividend * T) - N(d2) * K * exp(-r * T);
+	}
+
+	else {
+
+		  analyticPrice = -N(-d1) * S * exp(-dividend * T) + N(-d2) * K * exp(-r * T);
+	}
+
+	return analyticPrice;
 }
