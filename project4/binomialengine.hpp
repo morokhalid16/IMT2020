@@ -142,7 +142,7 @@ namespace QuantLib {
 
 			for (int i = 0; i <= timeSteps_ - 1; i++) {
 				option.values()[i] = BS(lattice->underlying(timeSteps_ - 1, i), payoff->strike(), maturity - grid[timeSteps_ - 1], r, v).analyticPrice;
-				//option.values()[i] = 12.3;
+				//option.values()[i] = 1.7;
 
 			}
 
